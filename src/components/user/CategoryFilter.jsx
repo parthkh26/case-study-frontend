@@ -5,7 +5,7 @@ function CategoryFilter({ selectedCategory, onCategoryChange, onPriceFilter, onC
     "All",
     "Electronics",
     "T-Shirts",
-    "Books",
+    "Trousers",
     "Sports",
     "Shoes"
   ];
@@ -26,10 +26,11 @@ function CategoryFilter({ selectedCategory, onCategoryChange, onPriceFilter, onC
   }
 
   return (
-    <div className="w-64 p-6 bg-white rounded-lg shadow-md border-r border-gray-200">
-      <h3 className="text-xl font-bold text-gray-800 mb-4">Filter by Category</h3>
-      <div className="space-y-2">
-        {categories.map((category) => (
+    <div className="w-full lg:w-64 flex flex-col md:flex-row lg:flex-col gap-6">
+      <div className="flex-1 p-6 bg-white rounded-lg shadow-md">
+        <h3 className="text-xl font-bold text-gray-800 mb-4">Filter by Category</h3>
+        <div className="space-y-2">
+          {categories.map((category) => (
           <button
             key={category}
             onClick={() =>
@@ -46,21 +47,21 @@ function CategoryFilter({ selectedCategory, onCategoryChange, onPriceFilter, onC
           </button>
         ))}
       </div>
+      </div>
 
-
-
-      <h3 className="text-xl font-bold text-gray-800 mb-4">
+      <div className="flex-1 p-6 bg-white rounded-lg shadow-md">
+        <h3 className="text-xl font-bold text-gray-800 mb-4">
         Filter by Price
-      </h3>
+        </h3>
 
-      <div className="space-y-3">
+        <div className="space-y-3">
 
         <input
           type="number"
           placeholder="Min Price"
           value={minPrice}
           onChange={(e) => setMinPrice(e.target.value)}
-          className="w-full px-3 py-2 border rounded-md"
+          className="w-full px-3 py-2 rounded-md"
         />
 
         <input
@@ -68,7 +69,7 @@ function CategoryFilter({ selectedCategory, onCategoryChange, onPriceFilter, onC
           placeholder="Max Price"
           value={maxPrice}
           onChange={(e) => setMaxPrice(e.target.value)}
-          className="w-full px-3 py-2 border rounded-md"
+          className="w-full px-3 py-2  rounded-md"
         />
 
         <button
@@ -86,6 +87,7 @@ function CategoryFilter({ selectedCategory, onCategoryChange, onPriceFilter, onC
         </button>
 
       </div>
+    </div>
     </div>
   );
 }

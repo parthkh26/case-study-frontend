@@ -231,7 +231,7 @@ function EditProduct() {
               name="availableQuantity"
               value={form.availableQuantity}
               onChange={handleChange}
-              placeholder="Available Quantity"
+              placeholder="AvailableQuantity"
               className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
 

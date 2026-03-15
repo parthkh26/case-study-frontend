@@ -20,7 +20,7 @@ function AdminDashboard() {
     }
   };
 
-  // ✅ defined outside
+  
   const refreshTenants = async () => {
     try {
       const data = await getTenants();
